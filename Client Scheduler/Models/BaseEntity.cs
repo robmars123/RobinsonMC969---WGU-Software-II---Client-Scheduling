@@ -9,6 +9,11 @@ namespace Client_Scheduler.Models
 {
     public class BaseEntity
     {
+        public BaseEntity()
+        {
+            createDate = DateTime.UtcNow;
+            lastUpdate = DateTime.UtcNow;
+        }
         [Browsable(false)]
         [DisplayName("CreateDate")]
         public DateTime createDate { get; set; }

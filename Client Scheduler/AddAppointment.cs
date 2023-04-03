@@ -49,12 +49,11 @@ namespace Client_Scheduler
                     MessageBox.Show("End time is earlier than start time. Please try again.", "Error");
                     return;
                 }
-
                 Appointment appointment = new Appointment();
                 appointment.customerId = int.Parse(comboBoxCustomerIdAndName.Text.Substring(3, 2).Trim());
                 appointment.type = textBoxType.Text;
-                appointment.start = dateTimePickerStart.Value;
-                appointment.end = dateTimePickerEnd.Value;
+                appointment.start = dateTimePickerStart.Value.ToUniversalTime();
+                appointment.end = dateTimePickerEnd.Value.ToUniversalTime();
                 appointment.userId = int.Parse(comboBoxUserID.Text.Substring(3, 2).Trim());
                 appointment.createdBy = loggedUser.userName;
                 appointment.lastUpdateBy = loggedUser.userName;

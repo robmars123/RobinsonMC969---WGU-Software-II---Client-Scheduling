@@ -46,11 +46,11 @@ namespace Client_Scheduler
 
             foreach (var entityEntry in entries)
             {
-                ((BaseEntity)entityEntry.Entity).lastUpdate = DateTime.Now;
+                ((BaseEntity)entityEntry.Entity).lastUpdate = DateTime.Now.ToUniversalTime();
 
                 if (entityEntry.State == EntityState.Added)
                 {
-                    ((BaseEntity)entityEntry.Entity).createDate = DateTime.Now;
+                    ((BaseEntity)entityEntry.Entity).createDate = DateTime.Now.ToUniversalTime();
                 }
             }
 
