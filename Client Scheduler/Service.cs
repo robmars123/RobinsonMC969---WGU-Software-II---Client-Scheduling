@@ -15,7 +15,7 @@ namespace Client_Scheduler
     public class Service
     {
         //Note: ContextDB is using App.Config ConnectionString. String below is used on MySqlCommand embedded query. 
-        public static string conString = "server=localhost;database=client_schedule;user id=sqlUser;password=passw0rd!";
+        public static string conString = "server=localhost;database=client_schedule;user id=sqlUser;password=Passw0rd!";
         private static User loggedInUser = new User();
 
         //Get List of Appontments
